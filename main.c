@@ -3,16 +3,14 @@
 
 int main()
 {
-    int height, width, perimeter, area;
-    printf("enter height: \n");
+    int height;
+    printf("Enter height in centimeters: \n");
     scanf("%d", &height);
-
-    printf("Enter width: \n");
-    scanf("%d", &width);
-
-    perimeter = (height + width) * 2;
-    area = height * width;
-    printf("%d\n", perimeter);
-    printf("%d\n", area);
-
+    if (height < 150){
+        printf("Dwarf");
+    }else if (height = 150){
+        printf("Average");
+    }else {
+        printf("tall");
+    }
 }
