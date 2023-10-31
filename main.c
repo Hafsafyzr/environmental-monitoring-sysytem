@@ -3,20 +3,16 @@
 
 int main()
 {
-    int ID;
-    printf("Enter employee ID: \n");
-    scanf("%d",& ID);
+    int height, width, perimeter, area;
+    printf("enter height: \n");
+    scanf("%d", &height);
 
-    int hrs;
-    printf("Enter total worked hours in the month: \n");
-    scanf("%d", &hrs);
+    printf("Enter width: \n");
+    scanf("%d", &width);
 
-    int amount;
-    float p;
-    printf("Enter amount per hour: \n");
-    scanf("%d", &amount);
+    perimeter = (height + width) * 2;
+    area = height * width;
+    printf("%d\n", perimeter);
+    printf("%d\n", area);
 
-    printf("%d\n", ID);
-    p = hrs * amount;
-    printf("%.2f", p);
 }
