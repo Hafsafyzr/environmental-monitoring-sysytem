@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+void Binary(int x){
+    if (x > 0){
+        Binary(x / 2) ;
+        printf("%d",x % 2);
+    }
+}
 int main()
 {
-    int height;
-    printf("Enter height in centimeters: \n");
-    scanf("%d", &height);
-    if (height < 150){
-        printf("Dwarf");
-    }else if (height = 150){
-        printf("Average");
-    }else {
-        printf("tall");
-    }
+   int x;
+   printf("Enter number: \n");
+   scanf("%d", &x);
+   Binary(x);
+   return 0;
 }
