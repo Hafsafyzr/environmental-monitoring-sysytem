@@ -1,16 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-void Binary(int x){
-    if (x > 0){
-        Binary(x / 2) ;
-        printf("%d",x % 2);
+void fibonacci(int n){
+    int i;
+    int t1 = 0, t2 = 1;
+
+    if (n >= 1){
+        printf("%d", t1);
     }
+    if (n >= 2){
+        printf("%d", t2);
+    }
+    for (i = 3; i <= n; ++i){
+        int nextTerm = t1 + t2;
+        printf("%d", nextTerm);
+        t1 = t2;
+        t2 = nextTerm;
+        nextTerm = t1 +t2;
+    }
+
+
 }
 int main()
 {
-   int x;
+    int n;
    printf("Enter number: \n");
-   scanf("%d", &x);
-   Binary(x);
-   return 0;
+   scanf("%d", &n);
+
+   fibonacci(n);
+   printf("%d", n);
+   return n;
 }
